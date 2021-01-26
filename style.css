@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#umumi{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+#umumi div{
+    position: absolute;
+}
+#yol{
+    width: 100%;
+    height: 100%;
+    background-image: url("img/yol.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#masin1{
+    left: -340px;
+    bottom: 0;
+    width: 340px;
+    height: 250px;
+    background-image: url("img/car1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+    animation-name: masin1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#masin2{
+    right: -290px;
+    bottom: 60px;
+    width: 290px;
+    height: 180px;
+    background-image: url("img/car2.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+    animation-name: masin2;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#logo{
+    transform: translate(-50%,0);
+    left: 50%;
+    top: -170px;
+    width: 170px;
+    height: 170px;
+    background-image: url("img/logo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+    animation-name: logo;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+#yazi{
+    transform: rotate(-180deg);
+    right: -470px;
+    top: 50px;
+    width: 470px;
+    height: 170px;
+    z-index: 2;
+    animation-name: yazi;
+    animation-duration: 3s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    font: 400 35px/20px Arial;
+    color: #FFF;
+    text-shadow: 1px 1px 3px blueviolet;
+}
+@keyframes masin1{
+    from{
+        left: -340px;
+    }
+    to{
+        left: 100%;
+    }
+}
+
+@keyframes masin2{
+    from{
+        right: -290px;
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes logo{
+    from{
+        top: -170px;
+    }
+    to{
+        top: 40px;
+    }
+}
+@keyframes yazi{
+    from{
+        transform: rotate(-180deg);
+        right: -470px;
+    }
+    to{
+        transform: rotate(0deg);
+        right: 50px;
+    }
+}
